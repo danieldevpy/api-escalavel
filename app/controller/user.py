@@ -1,6 +1,7 @@
 from database.database import Session
 from models.user import User
 
+
 class UserOrm:
 
     @staticmethod
