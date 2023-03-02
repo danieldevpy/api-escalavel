@@ -23,13 +23,11 @@ services:
       MYSQL_USER: 'api_user'
       MYSQL_PASSWORD: 'api_pass'
       MYSQL_ROOT_PASSWORD: 'root'
-    ports:
-      - '3307:3306'
-    expose:
-      - '3306'
     volumes:
       - './volumes/mysql:/var/lib/mysql'
       - "./db.sql:/docker-entrypoint-initdb.d/1.sql"
+    networks:
+      - proxy
 
   api-01:
     build: .

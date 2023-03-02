@@ -5,6 +5,6 @@ import time
 
 time.sleep(2)
 # Database creation
-engine = create_engine("mysql+mysqlconnector://api_user:api_pass@192.168.10.18:3307/dbapi")
+engine = create_engine("mysql+mysqlconnector://api_user:api_pass@database:3306/dbapi")
 Session = sessionmaker(bind=engine)
 Base = declarative_base()
