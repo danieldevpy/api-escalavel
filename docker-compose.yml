@@ -4,15 +4,15 @@ networks:
   proxy:
     driver: bridge
 
-services:
-  nginx:
-    image: nginx
-    volumes:
-      - ./nginx.conf:/etc/nginx/nginx.conf
-    ports:
-      - 80:80
-    networks:
-      - proxy
+#services:
+#  nginx:
+#    image: nginx
+#    volumes:
+#      - ./nginx.conf:/etc/nginx/nginx.conf
+#    ports:
+#      - 80:80
+#    networks:
+#      - proxy
 
   database:
     image: mysql:5.7
@@ -35,10 +35,10 @@ services:
       - ./app/:/app
     networks:
       - proxy
-
-  api-02:
-    build: .
-    volumes:
-      - ./app/:/app
-    networks:
+#
+#  api-02:
+#    build: .
+#    volumes:
+#      - ./app/:/app
+#    networks:
       - proxy
